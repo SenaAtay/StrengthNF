@@ -11,6 +11,7 @@
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
+    Button,
   } from "sveltestrap";
 
   let isOpen = false;
@@ -29,15 +30,15 @@
 
 <!-- svelte-ignore missing-declaration -->
 <Navbar color="light" light expand="md">
-  <NavbarBrand href="/">sveltestrap</NavbarBrand>
+  <NavbarBrand href="/">StrengthN</NavbarBrand>
   <NavbarToggler on:click={() => (isOpen = !isOpen)} />
   <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
     <Nav class="ml-auto" navbar>
       <NavItem>
-        <NavLink href="#components/">Components</NavLink>
+        <NavLink href="#Administrator/">Administrator</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="https://github.com/bestguy/sveltestrap">GitHub</NavLink>
+        <Button class="login">Log in</Button>
       </NavItem>
       <Dropdown nav inNavbar>
         <DropdownToggle nav caret>Options</DropdownToggle>
@@ -51,3 +52,10 @@
     </Nav>
   </Collapse>
 </Navbar>
+
+<style>
+  .login {
+    color: black;
+    background-color: black;
+  }
+</style>
